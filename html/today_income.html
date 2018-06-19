@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>奇速共享</title>
+    <link rel="stylesheet" href="../css/layui.css" media="all">
+    <link rel="icon" href="../images/ico.ico">
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../css/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="stylesheet" type="text/css" href="../css/electric_detail.css"/>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 80 + 'px';
+        window.onresize = function(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 80 + 'px';
+        }
+    </script>
+</head>
+<body>
+	<header>
+		<img src="../images/LOGO1.png"/>
+		<h3>奇速共享充电桩数据监控系统</h3>
+	</header>
+	<nav class="nav">
+		<a href="../index.html"><i class="iconfont icon-yunyingguanli" style="font-size: 1rem;"></i>汽车运营数据</a>
+		<a href="../electric_station.html"><i class="iconfont icon-yunyingtuiguang" style="font-size: 1rem;"></i>充电桩监控数据</a>
+		<a href="today_income.html" class="show drop"><i class="iconfont icon-qianmoney47" style="font-size: 1rem;"></i>今日充值</a>
+	</nav>
+	<div class="allcont">
+		<div class="lead">
+    		<a href="../electric_station.html">充电桩监控>></a>
+    		<a class="cur" href="javascript:void(0)">今日充值</a>
+    	</div>
+
+		
+	   <!--今日充值金额-->
+	    <div class="recharge">
+	    	<h2>今日充值金额</h2>
+	    	<button class="godata">导出</button>
+    		<div class="slide">
+    			<button id="export">导出本页</button>
+    			<button id="allexport">全部导出</button>
+    		</div>
+	        <table border="0" cellspacing="0" cellpadding="0" class="layui-table datas">
+	            <thead>
+	                <tr class="head">
+	                  	<th>手机号</th>
+	                  	<th>充值金额（元）</th>
+	                  	<th>赠送金额（元）</th>
+	                  	<th>充值渠道</th>
+	                  	<th>充值类型</th>
+	                  	<th>创建时间</th>
+	                </tr> 
+	            </thead>
+	            <tbody class="recharge_num">
+	                 
+	            </tbody>
+	        </table>
+	        <table border="0" cellspacing="0" cellpadding="0" id="all" class="layui-table">
+	            <thead>
+	                <tr class="head">
+	                  	<th>手机号</th>
+	                  	<th>充值金额（元）</th>
+	                  	<th>赠送金额（元）</th>
+	               
+	                  	<th>充值渠道</th>
+	                  	<th>充值类型</th>
+	                  	<th>创建时间</th>
+	                </tr> 
+	            </thead>
+	            <tbody class="allrecharge_num">
+	                 
+	            </tbody>
+	        </table>
+	        <div id="demo2"></div>
+	    </div>
+	    <!--今日充值金额-->
+	</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.datepicker.js"></script>
+<script src="http://mananger.qisu666.com:80/resources/supervision/js/echarts.min.js" type="text/javascript"></script>
+<script src="../layui.js"></script>
+<script type="text/javascript" src="../js/jqexcal.min.js"></script>
+<script type="text/javascript" src="../js/today_income.js" ></script>
+</body>
+</html>

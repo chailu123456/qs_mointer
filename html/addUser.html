@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>奇速共享</title>
+   	<link rel="stylesheet" href="../css/layui.css" media="all">
+    <link rel="icon" href="../images/ico.ico">
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../css/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../css/electric_detail.css"/>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 80 + 'px';
+        window.onresize = function(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 80 + 'px';
+        }
+    </script>
+</head>
+<body>
+	<header>
+		<img src="../images/LOGO1.png"/>
+		<h3>奇速共享充电桩数据监控系统</h3>
+	</header>
+	<nav class="nav">
+		<a href="../index.html"><i class="iconfont icon-yunyingguanli" style="font-size: 1rem;"></i>汽车运营数据</a>
+		<!--<a href="takeCar.html">挪车总数</a>
+		<a href="no_takeCar.html">未还车总数</a>-->
+		<a href="../electric_station.html"><i class="iconfont icon-yunyingtuiguang" style="font-size: 1rem;"></i>充电桩监控数据</a>
+		<a href="addUser.html" class="show drop"><i class="iconfont icon-yonghu"></i>新增用户</a>
+	</nav>
+	<div class="shadow">
+	  <div class="loginmodal">
+	    <h1>奇速共享</h1>
+	    <form id="loginform">
+	      <label for="username">账号:</label>
+	      <input type="text" name="username" value="请输入账号" id="username" class="txtfield">
+	      <label for="password">密码:</label>
+	      <input type="password" name="password" id="password" class="txtfield">
+	      <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="登 陆"></div>
+	    </form>
+	  </div>
+	</div>
+	<div class="allcont">
+		<div class="lead">
+    		<a href="../electric_station.html">充电桩监控>></a>
+    		<a class="cur" href="javascript:void(0)">新增用户</a>
+    	</div>
+	    <div class="today_date">
+	    	<h2>今日新增用户</h2>
+	    	<button class="godata">导出</button>
+    		<div class="slide">
+    			<button id="export">导出本页</button>
+    			<button id="allexport">全部导出</button>
+    		</div>
+	        <table border="0" cellspacing="0" cellpadding="0" class="layui-table datas">
+	            <thead>
+	                <tr class="head">
+	                  	<th>用户名</th>
+	                  	<th>性别</th>
+	                  	<th>电话</th>
+	                  	<th>账号状态</th>
+	                  	<th>创建时间</th>
+	             
+	                </tr> 
+	            </thead>
+	            <tbody class="today_num">
+	                 
+	            </tbody>
+	        </table>
+	        <table border="0" cellspacing="0" cellpadding="0" id="all" class="layui-table">
+	            <thead>
+	                <tr class="head">
+	                  	<th>用户名</th>
+	                  	<th>性别</th>
+	                  	<th>电话</th>
+	                  	<th>账号状态</th>
+	                  	<th>创建时间</th>
+	                </tr> 
+	            </thead>
+	            <tbody class="alltoday_num">
+	                 
+	            </tbody>
+	        </table>
+	        <div id="demo9"></div>
+	    </div>
+	</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.datepicker.js"></script>
+<script src="http://mananger.qisu666.com:80/resources/supervision/js/echarts.min.js" type="text/javascript"></script>
+<script src="../layui.js"></script>
+<script type="text/javascript" src="../js/jqexcal.min.js"></script>
+<script type="text/javascript" src="../js/addUser.js" ></script>
+</body>
+</html>

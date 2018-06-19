@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="http://webapi.amap.com/maps?v=1.3&key=6f9d1d3ad191bec68f21f3eea62f7974&plugin=AMap.Autocomplete"></script>
+<script src="http://mananger.qisu666.com:80/resources/supervision/js/echarts.min.js" type="text/javascript"></script>
+<script src="http://mananger.qisu666.com:80/resources/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+ <link rel="stylesheet" href="http://mananger.qisu666.com:80/resources/supervision/css/base.css"/>
+ <link rel="icon" href="http://mananger.qisu666.com:80/resources/img/favicon.ico">
+<link rel="shortcut icon" href="http://mananger.qisu666.com:80/resources/img/favicon.ico">
+<title>奇速共享实时监控</title>
+</head>
+<body>
+<div id="audio" style="display: none">
+    <audio id="music" src="http://mananger.qisu666.com:80/resources/supervision/audio/warn.mp3" controls="controls" preload="auto" hidden="true"></audio>
+</div>
+  <header>
+    <div class="top wrap">
+        <h1>
+            <img src="http://mananger.qisu666.com:80/resources/supervision/image/logo.png"/>奇速共享实时监控系统
+        </h1>
+        <ul class="clearfix">
+            <li>
+               <div class="fl img">
+                   <img src="http://mananger.qisu666.com:80/resources/supervision/image/top1.png"/>
+               </div>
+               <div class="fl">
+                   <h2>总电量</h2>
+                   <p>66375.26度</p>
+               </div>
+            </li>
+            <li>
+                <div class="fl img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top2.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总充电次数</h2>
+                    <p>5362次</p>
+                </div>
+            </li>
+            <li>
+                <div class="fl img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top3.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总充电时长</h2>
+                    <p>444374分钟</p>
+                </div>
+            </li>
+            <li>
+                <div class="fl img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top4.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总枪数</h2>
+                    <p>166</p>
+                </div>
+            </li>
+            <li>
+                <div class="fl img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top5.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总电费</h2>
+                    <p>32152.38元</p>
+                </div>
+            </li>
+            <li>
+                <div class="fl img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top6.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总服务费</h2>
+                    <p>44717.29</p>
+                </div>
+            </li>
+            <li>
+                <div class="fl img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top7.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总用户数</h2>
+                    <p>543个</p>
+                </div>
+            </li>
+            <li>
+                <div class="fl img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top8.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总充值金额</h2>
+                    <p>256721.25元</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="blank1"></div>
+<section>
+<div class="wrap clearfix">
+    <!--桩点分布预警-->
+    <div class="fl pile-distribute">
+            <div class="title">
+                <h1>桩点分布和预警</h1>
+                <div class="fl point-list" id="pointList">
+                    <div class="fl an1"></div>
+                    <div class="fl an2"></div>
+                    <div class="fl an3"></div>
+                    <div class="fl an4"></div>
+                    <div class="fl an5"></div>
+                    <div class="fl an6"></div>
+                </div>
+                <span class="fr" id="time">
+                    
+                </span>
+            </div>
+            <div class="contents">
+                <div class="fl map" id="map">
+                      <!--地图显示区域-->
+                </div>
+                <div class="shade" id="shade"></div>
+                <div class="fr list">
+                    <dl>
+                        <dt>
+                            今日新增用户
+                        </dt>
+                        <dd id="addUser">
+                           
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt2">
+                            今日充值金额
+                        </dt>
+                        <dd id="todayCharge">
+                          
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt3">
+                            今日电费
+                        </dt>
+                        <dd id="todayFee">
+                           
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt4">
+                            今日服务费
+                        </dt>
+                        <dd id="todayServiceFee">
+                            
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+    </div>
+    <!--桩数据分析-->
+    <div class="fr pile-analyze">
+            <div class="title">
+                数据分析
+            </div>
+
+            <div class="linePic">
+                <!--折线图-->
+                <div class="line" id="l1">
+                    
+                </div>
+                <div class="line" id="l2">
+                    
+                </div>
+            </div>
+    </div>
+</div>
+</section>
+<div class="blank2"></div>
+<section>
+    <div class="wrap clearfix">
+        <!--最近充电-->
+        <div class="fl recently">
+            <div class="title">最近充电</div>
+            <div class="recently-contents">
+                <table border="0">
+                <thead>
+                    <tr>
+                        <td width="300" class="tl"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;站名</span></td>
+                        <td width="200">充电量(度)</td>
+                        <td width="284">充电时长</td>
+                        <td width="284">消费金额(元)</td>
+                    </tr>
+                </thead>
+                <tbody id="recently">
+                    <!-- 异步获得数据 -->
+                   
+                </tbody>
+            </table>
+            
+            </div>
+            
+        </div>
+        <!--统计分析-->
+        <div class="fr statistics">
+            <div class="title">今日统计</div>
+            <div class="contents">
+                <div class="fl">
+                    <div id="main1" class="dashboard"></div>
+                    <div style="text-align: center;color:#fff;">今日充电量</div>
+                </div>
+                <div class="fl">
+                    <div id="main2" class="dashboard"></div>
+                    <div style="text-align: center;color:#fff;">今日充电次数</div>
+                </div>
+
+                <div class="fl">
+                    <div id="main3" class="dashboard"></div>
+                    <div style="text-align: center;color:#fff;">今日桩使用数</div>
+                </div>
+                <div class="fl">
+                    <div id="main4" class="dashboard"></div>
+                    <div style="text-align: center;color:#fff;">今日桩故障数</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var year,month,day,hours,minute,now;
+    function time(){
+        now=new Date();
+        year=now.getFullYear()+"年";
+        month=now.getMonth()+1+'月';
+        day=now.getDate()+'日';
+        hours=now.getHours();
+        if(hours<10){
+            hours='0'+hours;
+        }else{
+            hours=hours+'';
+        }
+        minute=now.getMinutes();
+        if(minute<10){
+            minute='0'+minute;
+        }else{
+            minute=''+minute;
+        }
+        $("#time").html(year+month+day+'&nbsp;&nbsp;'+hours+':'+minute);
+    }
+    function move(){
+        $("#shade").animate({
+            opacity:'0.8',
+            left:'740px'
+        },6000,function(){
+            $("#shade").css({"opacity":"0","left":"0"})
+        })
+    }
+    time();
+    move();
+    setInterval(time,6000);
+    setInterval(move,10000);
+</script>
+<script>
+    var map = new AMap.Map("map", {
+        resizeEnable: true,
+        zoom:15,
+        center: [113.355728,23.112574]
+    });
+    map.setMapStyle("fresh")
+    map.setFeatures(['bg','point','building']);
+    addGZ();
+    function addGZ() {
+        //加载行政区划插件
+        AMap.service('AMap.DistrictSearch', function() {
+            var opts = {
+                subdistrict: 1,   //返回下一级行政区
+                extensions: 'all',  //返回行政区边界坐标组等具体信息
+                level: 'city'  //查询行政级别为市
+            };
+            //实例化DistrictSearch
+            district = new AMap.DistrictSearch(opts);
+            district.setLevel('district');
+            //行政区查询
+            district.search('广州市', function(status, result) {
+                var bounds = result.districtList[0].boundaries;
+                var polygons = [];
+                if (bounds) {
+                    for (var i = 0, l = bounds.length; i < l; i++) {
+                        //生成行政区划polygon
+                        var polygon = new AMap.Polygon({
+                            map: map,
+                            strokeWeight: 1,
+                            path: bounds[i],
+                            fillOpacity: 0.2,
+                            fillColor: '#0791c2',
+                            strokeColor: '#0791c2'
+                        });
+                        polygons.push(polygon);
+                    }
+                    map.setFitView();//地图自适应
+                }
+            });
+        });
+    }
+//    自定义添加覆盖物
+    
+    //控制预警灯的数量
+    function warn(n){
+        if(n>=6){
+            $("#pointList div").addClass("bad");    
+        }else if(n>0&&n<6){
+            var $div=$("#pointList div");
+            for(var i=$div.length-1;i>$div.length-1-n;i--){
+                $($div[i]).addClass("bad")
+            }
+        }else{
+            $("#pointList div").removeClass('bad');
+        }
+    }
+    //桩点分布地图数据
+    function queryPilesData(){
+        $.ajax({
+            type:'post',
+            //url:'http://mananger.qisu666.com:80/manager/monitor/today/data',
+            url:'http://mananger.qisu666.com:80/manager/monitor/piles/data',
+            success:function(data){
+                console.log(data); 
+                var errorCount=data.errorcount+data.far;
+                 option4.series.data[0].value=errorCount;
+                 chart4.setOption(option4);
+                if(errorCount>=0){
+                    warn(errorCount);
+                }
+                var content,markerPosition;
+                for(var i=0;i<data.piles_info.length;i++){
+                    markerPosition=[parseFloat(data.piles_info[i].station_longitude),parseFloat(data.piles_info[i].station_latitude)];
+                    if(data.piles_info[i].error==="1"){
+                        content='<div style="width:10px;height:10px;border-radius: 5px;background-color:#EE2C2C;"></div>';
+                    }else if(data.piles_info[i].far!=="0"){
+                        content='<div style="width:10px;height:10px;border-radius: 5px;background-color: #DAA520;"></div>';
+                    }else{
+                        content='<div style="width:10px;height:10px;border-radius: 5px;background-color:#00FF00;"></div>';
+                    }
+                    var marker=new AMap.Marker();
+                    marker.setContent(content);
+                    marker.setPosition(markerPosition);
+                    marker.setMap(map);
+                }
+            }
+        });
+    }
+//  queryPilesData();
+//  setInterval(queryPilesData,100000);
+    //最近充电数据
+    function queryOrderData(){
+        $.ajax({
+            type:'post',
+            url:'http://mananger.qisu666.com:80/manager/monitor/order/data',
+            data:{'pageSize':'5'},
+            success:function(data){
+                /* console.log(data); */
+                var str="";
+                for(var i=0;i<data.length;i++){
+                    var name=data[i].order_state=="02"?data[i].station_name+'<span style="font-size:18px;color:red;">(充电中)</span>':data[i].station_name;
+                    var total_charge_money=data[i].total_charge_money;
+                    var total_charge_quantity=data[i].total_charge_quantity;
+                    var total_charge_times=data[i].total_charge_times;
+                    str+="<tr><td class='tl'><i>"+name+"</i></td><td>"+total_charge_quantity+"</td><td>"+total_charge_times+"</td><td>"+total_charge_money+"</td></tr>"
+                    
+                }
+                
+                $("#recently").html(str);
+            }
+        });
+    }
+//  queryOrderData();
+//  setInterval(queryOrderData,60000);
+    
+    
+   
+</script>
+<script>
+
+    var option1,option2,option3,option4,option5,option6,option7,option8,chart1,chart2,chart3,chart4,chart5,chart6,chart7,chart8;
+    chart1=echarts.init(document.getElementById('main1'));
+    chart2=echarts.init(document.getElementById('main2'));
+    chart3=echarts.init(document.getElementById('main3'));
+    chart4=echarts.init(document.getElementById('main4'));
+    /*折线图*/
+    chart5=echarts.init(document.getElementById('l1'));
+    chart6=echarts.init(document.getElementById('l2'));
+/*     chart7=echarts.init(document.getElementById('l3'));
+    chart8=echarts.init(document.getElementById('l4')); */    
+    
+    option1 = {
+        tooltip : {
+            formatter: "{a} <br/>{c} {b}"
+        },
+        toolbox: {
+            show : false,
+            feature : {
+                mark : {show: true},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        series: {
+            name:'今日充电量',
+            type:'gauge', // 默认全局居中
+            radius : '100%',
+            min:0,
+            max:900,
+            endAngle:-10,
+            splitNumber:6,
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: [[0.29, '#1e90ff'],[0.86,'lime' ],[1, '#ff4500']],
+                    width: 2,
+                    shadowColor : '#fff',//默认透明
+                    shadowBlur: 6
+                }
+            },
+            axisLabel: {            // 坐标轴小标记
+                textStyle: {       // 属性lineStyle控制线条样式
+                    fontWeight: 'bolder',
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 6
+                }
+            },
+            axisTick: {            // 坐标轴小标记
+                length :12,        // 属性length控制线长
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: 'auto',
+                    shadowColor : '#fff',//默认透明
+                    shadowBlur: 6
+                }
+            },
+            splitLine: {           // 分隔线
+                length :20,         // 属性length控制线长
+                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                    width:3,
+                    color: '#fff',
+                    shadowColor : '#fff' ,//默认透明
+                    shadowBlur: 6
+                }
+            },
+            pointer: {
+                width:5,
+                shadowColor : '#fff',//默认透明
+                shadowBlur: 5
+            },
+            title : {
+                offsetCenter: [0, '-30%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    fontStyle: 'italic',
+                    color: '#fff',
+                    fontSize:16,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 6
+                }
+            },
+            detail : {
+                borderColor: '#fff',
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5,
+                width: 80,
+                height:30,
+                offsetCenter: [15, '50%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    color: '#fff'
+                }
+            },
+            data:[{value:0, name: '度'}]
+        }
+    };
+    option2 = {
+        tooltip : {
+            formatter: "{a} <br/>{c} {b}"
+        },
+        toolbox: {
+            show : false,
+            feature : {
+                mark : {show: true},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        series: {
+            name:'今日充电次数',
+            type:'gauge', // 默认全局居中
+            radius : '100%',
+            min:0,
+            max:100,
+            endAngle:-10,
+            splitNumber:5,
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                     color: [[0.29, '#1e90ff'],[0.86,'lime' ],[1, '#ff4500']],
+                    width: 2,
+                    shadowColor : '#fff',//默认透明
+                    shadowBlur: 6
+                }
+            },
+            axisLabel: {            // 坐标轴小标记
+                textStyle: {       // 属性lineStyle控制线条样式
+                    fontWeight: 'bolder',
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 6
+                }
+            },
+            axisTick: {            // 坐标轴小标记
+                length :12,        // 属性length控制线长
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: 'auto',
+                    shadowColor : '#fff',//默认透明
+                    shadowBlur: 6
+                }
+            },
+            splitLine: {           // 分隔线
+                length :20,         // 属性length控制线长
+                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                    width:3,
+                    color: '#fff',
+                    shadowColor : '#fff' ,//默认透明
+                    shadowBlur: 6
+                }
+            },
+            pointer: {
+                width:5,
+                shadowColor : '#fff',//默认透明
+                shadowBlur: 5
+            },
+            title : {
+                offsetCenter: [0, '-30%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    fontStyle: 'italic',
+                    color: '#fff',
+                    fontSize:16,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 6
+                }
+            },
+            detail : {
+                //backgroundColor: 'rgba(30,144,255,0.8)',
+                // borderWidth: 1,
+                borderColor: '#fff',
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5,
+                width: 80,
+                height:30,
+                offsetCenter: [15, '50%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    color: '#fff'
+                }
+            },
+            data:[{value:0, name: '次'}]
+        }
+    };
+    option3 = {
+        tooltip : {
+            formatter: "{a} <br/>{c} {b}"
+        },
+        toolbox: {
+            show : false,
+            feature : {
+                mark : {show: true},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        series: {
+            name:'今日桩使用数',
+            type:'gauge', // 默认全局居中
+            radius : '100%',
+            min:0,
+            max:30,
+            endAngle:-10,
+            splitNumber:6,
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                     color: [[0.29, '#1e90ff'],[0.86,'lime' ],[1, '#ff4500']],
+                    width: 2,
+                    shadowColor : '#fff',//默认透明
+                    shadowBlur: 6
+                }
+            },
+            axisLabel: {            // 坐标轴小标记
+                textStyle: {       // 属性lineStyle控制线条样式
+                    fontWeight: 'bolder',
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 6
+                }
+            },
+            axisTick: {            // 坐标轴小标记
+                length :12,        // 属性length控制线长
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: 'auto',
+                    shadowColor : '#fff',//默认透明
+                    shadowBlur: 6
+                }
+            },
+            splitLine: {           // 分隔线
+                length :20,         // 属性length控制线长
+                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                    width:3,
+                    color: '#fff',
+                    shadowColor : '#fff' ,//默认透明
+                    shadowBlur: 6
+                }
+            },
+            pointer: {
+                width:5,
+                shadowColor : '#fff',//默认透明
+                shadowBlur: 5
+            },
+            title : {
+                offsetCenter: [0, '-30%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    fontStyle: 'italic',
+                    fontSize:16,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 6
+                }
+            },
+            detail : {
+                //backgroundColor: 'rgba(30,144,255,0.8)',
+                // borderWidth: 1,
+                borderColor: '#fff',
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5,
+                width: 80,
+                height:30,
+                offsetCenter: [15, '50%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    color: '#fff'
+                }
+            },
+            data:[{value:0, name: '个'}]
+        }
+     };
+    option4 = {
+        tooltip : {
+            formatter: "{a} <br/>{c} {b}"
+        },
+        toolbox: {
+            show : false,
+            feature : {
+                mark : {show: true},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        series: {
+            name:'今日桩故障数',
+            type:'gauge', // 默认全局居中
+            radius : '100%',
+            min:0,
+            max:30,
+            endAngle:-10,
+            splitNumber:6,
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    width: 2,
+                    color: [[0.29, '#1e90ff'],[0.86,'lime' ],[1, '#ff4500']],
+                    shadowColor : '#fff',//默认透明
+                    shadowBlur: 6
+                }
+            },
+            axisLabel: {            // 坐标轴小标记
+                textStyle: {       // 属性lineStyle控制线条样式
+                    fontWeight: 'bolder',
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 6
+                }
+            },
+            axisTick: {            // 坐标轴小标记
+                length :12,        // 属性length控制线长
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: 'auto',
+                    shadowColor : '#fff',//默认透明
+                    shadowBlur: 6
+                }
+            },
+            splitLine: {           // 分隔线
+                length :20,         // 属性length控制线长
+                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                    width:3,
+                    color: '#fff',
+                    shadowColor : '#fff' ,//默认透明
+                    shadowBlur: 6
+                }
+            },
+            pointer: {
+                width:5,
+                shadowColor : '#fff',//默认透明
+                shadowBlur: 5
+            },
+            title : {
+                offsetCenter: [0, '-30%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    fontStyle: 'italic',
+                    fontSize:16,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 6
+                }
+            },
+            detail : {
+                //backgroundColor: 'rgba(30,144,255,0.8)',
+                // borderWidth: 1,
+                borderColor: '#fff',
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5,
+                width: 80,
+                height:30,
+                offsetCenter: [15, '50%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    color: '#fff'
+                }
+            },
+            data:[{value:0, name: '个'}]
+        }
+    };
+    option5 = {
+            title: {
+                text: '充电分时统计',
+                textStyle :{
+                    color:"#ffffff",
+                    fontWeight:"normal"
+                },
+                left:20
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            xAxis :
+                {
+                    name :"（小时）",
+                    /* nameGap:-5, */
+                    type : 'category',
+                    boundaryGap : false,
+                    splitLine: {
+                        show: false
+                    },
+                    data : ["0"],
+                    axisLine:{
+                        lineStyle:{
+                            color:"#ffffff",
+                        }
+                    }
+                },
+            yAxis : 
+                {
+                    name :"（kWh）",
+                    type : 'value',
+                    splitLine: {
+                        lineStyle:{
+                            color:"#ffffff",
+                        }
+                    },
+                    boundaryGap: [0, '20%'],
+                    axisLine:{
+                        show: false,
+                        lineStyle:{
+                            color:"#ffffff",
+                        }
+                    }
+                },
+            series :
+                {
+                    name:'充电电量',
+                    type:'line',
+                    smooth:true,
+                    symbol: 'none',
+                    itemStyle: {
+                        normal: {
+                            color: '#2094bb'
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color:"#1f93ba"
+                        }
+                    },
+                    data : ["0"]
+                }
+        };
+        option6 = {
+            title: {
+                text: '最近15天充电电量',
+                textStyle :{
+                    color:"#ffffff",
+                    fontWeight:"normal"
+                },
+                left:20
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            xAxis : 
+                {
+                    name :"（日期）",
+                    /* nameGap:-5, */
+                    type : 'category',
+                    /* boundaryGap : false, */
+    /*              splitLine: {
+                        show: false
+                    }, */
+                    data : ["0"],
+                    axisLine:{
+                        lineStyle:{
+                            color:"#ffffff",
+                        }
+                    }
+                },
+            yAxis : 
+                {
+                    name :"（kWh）",
+                    type : 'value',
+                    splitLine: {
+                        show:false,
+                        /* lineStyle:{
+                            color:"#ffffff",
+                        } */
+                    }, 
+                    /* boundaryGap: [0, '20%'], */
+                    axisLine:{
+                        show: true,
+                        lineStyle:{
+                            color:"#ffffff",
+                        }
+                    } 
+                },
+            textStyle:{
+                    color:"#ffffff",
+                },
+            series : 
+                {
+                    name:'充电电量',
+                    type:'bar',
+                    /* smooth:true, */
+                    /* symbol: 'none', */
+                    itemStyle: {
+                        normal: {
+                            color: '#1f93ba',
+                            barBorderColor: "#1f93ba",
+                        }
+                    }, 
+                    areaStyle: {
+                        normal: {
+                            barBorderColor: "#1f93ba",
+                            color: '#ffffff',
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            position: "top", 
+                        }
+                    },
+                    barWidth:25, 
+                    data : ["0"]
+                }
+        };
+        function queryTodayData(){
+            $.ajax({
+                type:'post',
+                url:'http://192.168.1.204:9005/api/chargingpile/message/today',
+                contentType: "application/json;charset=utf-8",
+        		dataType:"json",
+        		data:JSON.stringify({}),
+                success:function(data){
+                	console.log(data)
+                    $("#addUser").html(data.addUserNumber+'个');
+                    var todayCharge = '0';
+                    if (data.today_money > 0) {
+                        todayCharge = data.today_money;
+                    } 
+                    $("#todayCharge").html(todayCharge+'元');
+                    $("#todayFee").html(data.total_charge_money+'元');
+                    $("#todayServiceFee").html(data.total_service_money+'元');
+                     option1.series.data[0].value=data.total_charge_quantity;
+                     option2.series.data[0].value=data.charge_times;
+                     option3.series.data[0].value=data.pile_use_times;
+                     option4.series.data[0].value=data.error_count;
+                     chart1.setOption(option1);
+                     chart2.setOption(option2);
+                     chart3.setOption(option3);
+                     //chart4.setOption(option4);
+                }
+            });
+        }
+        queryTodayData();
+//      setInterval(queryTodayData,60000);
+        
+        /*****************************************  刷新折线图方法     ***************************************/    
+        function queryDisplayData(){
+            var line_time=["00:00"];
+            var line_quantity=["0"];
+            $.ajax({
+                type:'post',
+                url:'http://mananger.qisu666.com:80/manager/monitor/display/data',
+                success:function(data){ 
+                    var lineData = data;
+                    /* console.log(data); */
+                    $.each(lineData, function(i, value) {
+                        /*时间  */
+                        line_time.push(value.time);
+                        /* 电量 */
+                        line_quantity.push(value.s_ele_quantity);
+                    });
+                    option5.xAxis.data=line_time;
+                    option5.series.data=line_quantity;
+                    chart5.setOption(option5);
+                    
+                }
+            });
+        }
+//      queryDisplayData(); 
+//      setInterval(queryDisplayData,300000);
+        /*历史10天数据  */
+        function tenday(){
+            var line_time10 = [];
+            var line_quantity10 = [];
+            $.ajax({
+                type:'post',
+                url:'http://mananger.qisu666.com:80/manager/monitor/recent/data',
+                data:{'pageSize':'15'},
+                success:function(data){
+                    console.log(data);
+                    var lineData = data;
+                    $.each(lineData, function(i, value) {                       
+                        line_time10.push(parseInt(value.month)+"."+parseInt(value.day));
+                        line_quantity10.push(value.t_quantity);
+                        option6.xAxis.data=line_time10;
+                        option6.series.data=line_quantity10;
+                        chart6.setOption(option6); 
+                    }); 
+                }
+            });
+        }
+//      tenday();
+</script>
+</body>
+</html>

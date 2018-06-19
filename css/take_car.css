@@ -1,0 +1,77 @@
+#demo6 {
+    margin-left: 12%;
+}
+.car_date {
+    float: right;
+    width: 90%;
+}
+.car_date form {
+	margin-top: 2%;
+}
+.car_date .layui-form-item {
+    clear: none;
+    float: left;
+    width: 14%;
+}
+.layui-table thead {
+    background-color: #009d9a;
+    border-collapse: collapse;
+}
+.cur {
+	color: #009d9a;
+}
+.head th {
+    text-align: center;
+    height: 40px;
+    width: 4%;
+    line-height: 40px;
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 10px 0;
+}
+.layui-table {
+	margin-top: 3%;
+}
+.car_num tr{
+	height: 50px;
+	line-height: 50px;
+}
+.car_num tr td {
+	text-align: center;
+}
+.select select {
+	width: 12%;	
+	height: 40px;
+	/*box-shadow: 0 0 5px #999;*/
+	border: 1px solid #eee;
+	margin-left: 3%;
+	border-radius: 3px;
+	/*background: -webkit-linear-gradient(top,#fff 20%,#f6f6f6 42%,#eee 77%,#f4f4f4 100%);*/
+}
+.select_nocar{
+    width: 60px;
+    height: 38px;
+    background: #009d9a;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+    margin-left: 2%;
+}
+.select_nocar:hover {
+	cursor: pointer;
+	background: #027d7b;
+}
+.alldatas {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.alldatas span {
+	font-size: 0.6rem;
+	margin-left: 10px;
+	color: #009d9a;
+	
+}
+.iconfont {
+	font-size: 0.8rem;
+}

@@ -1,0 +1,20 @@
+{  
+	"elec":[
+		{"datatime":"20180430","rn":"15","day":"30","month":"04","t_quantity":"753.15","total_fee":"924.75"},
+		{"datatime":"20180501","rn":"15","day":"01","month":"05","t_quantity":"867.89","total_fee":"1087.64"},
+		{"datatime":"20180502","rn":"15","day":"02","month":"05","t_quantity":"786.22","total_fee":"1030.99"},
+		{"datatime":"20180503","rn":"15","day":"03","month":"05","t_quantity":"946.05","total_fee":"1195.68"},
+		{"datatime":"20180504","rn":"15","day":"04","month":"05","t_quantity":"686.22","total_fee":"730.99"},
+		{"datatime":"20180505","rn":"15","day":"05","month":"05","t_quantity":"446.22","total_fee":"230.99"},
+		{"datatime":"20180506","rn":"15","day":"06","month":"05","t_quantity":"666.22","total_fee":"770.99"},
+		{"datatime":"20180507","rn":"15","day":"07","month":"05","t_quantity":"431.22","total_fee":"220.99"},
+		{"datatime":"20180508","rn":"15","day":"08","month":"05","t_quantity":"888.22","total_fee":"1234.99"},
+		{"datatime":"20180509","rn":"15","day":"09","month":"05","t_quantity":"555.22","total_fee":"1443.99"},
+		{"datatime":"20180510","rn":"15","day":"10","month":"05","t_quantity":"345.22","total_fee":"1030.99"},
+		{"datatime":"20180511","rn":"15","day":"11","month":"05","t_quantity":"768.22","total_fee":"543.99"},
+		{"datatime":"20180512","rn":"15","day":"12","month":"05","t_quantity":"909.22","total_fee":"995.99"},
+		{"datatime":"20180513","rn":"15","day":"13","month":"05","t_quantity":"812.22","total_fee":"890.99"},
+		{"datatime":"20180514","rn":"15","day":"14","month":"05","t_quantity":"345.22","total_fee":"244.99"}
+
+	]
+} 

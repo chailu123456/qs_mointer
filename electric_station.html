@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>奇速共享实时监控</title>
+    <link rel="stylesheet" href="css/layui.css"  media="all">
+    <link rel="icon" href="images/ico.ico">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script src="http://webapi.amap.com/maps?v=1.3&key=6f9d1d3ad191bec68f21f3eea62f7974&plugin=AMap.Autocomplete"></script>
+    <script src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+	<script src="http://mananger.qisu666.com:80/resources/supervision/js/echarts.min.js" type="text/javascript"></script>
+	<script src="http://mananger.qisu666.com:80/resources/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+	 <link rel="stylesheet" href="http://mananger.qisu666.com:80/resources/supervision/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/electric_station.css"/>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 80 + 'px';
+        window.onresize = function(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 80 + 'px';
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+	<img src="images/LOGO1.png"/>
+	<h3>奇速共享充电桩数据监控系统</h3>
+</div>
+<nav class="nav">
+	<a href="index.html"><i class="iconfont icon-yunyingguanli" style="font-size: 0.8rem;"></i>汽车运营数据</a>
+	<!--<a href="takeCar.html">挪车总数</a>
+	<a href="no_takeCar.html">未还车总数</a>-->
+	<a href="electric_station.html" class="show"><i class="iconfont icon-yunyingtuiguang" style="font-size: 0.8rem;"></i>充电桩监控数据</a>
+	<!--<a href="electric_detail.html">充电桩数据</a>-->
+</nav>
+<div class="content">
+<header>
+    <div class="top wrap" id="alldata">
+        <!--<h1>
+            <img src="http://mananger.qisu666.com:80/resources/supervision/image/logo.png"/>奇速共享实时监控系统
+        </h1>-->
+        <ul class="clearfix">
+            <li>
+               <div class="img">
+                   <img src="http://mananger.qisu666.com:80/resources/supervision/image/top1.png"/>
+               </div>
+               <div class="fl">
+                   <h2>总电量(度)</h2>
+                   <p><a href="html/five_detail.html" class="allelec"></a></p>
+               </div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top2.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总充电次数(次)</h2>
+                    <p><a href="html/five_detail.html" class="elec_number"></a></p>
+                </div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top3.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总充电时长(分钟)</h2>
+                    <p><a href="html/five_detail.html" class="minuter"></a></p>
+                </div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top4.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总枪数(个)</h2>
+                    <p><a href="html/allguns.html" class="allgun"></a></p>
+                </div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top5.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总电费(元)</h2>
+                    <p><a href="html/five_detail.html" class="allelecmoney"></a></p>
+                </div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top6.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总服务费(元)</h2>
+                    <p><a href="html/five_detail.html" class="allserve"></a></p>
+                </div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top7.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总用户数(个)</h2>
+                    <p><a href="html/user_money.html" class="alluesr"></a></p>
+                </div>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="http://mananger.qisu666.com:80/resources/supervision/image/top8.jpg"/>
+                </div>
+                <div class="fl">
+                    <h2>总充值金额(元)</h2>
+                    <p><a href="html/user_money.html" class="allmoneys"></a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+<!--<div class="blank1"></div>-->
+<section class="map_data">
+<div class="wrap clearfix">
+    <!--桩点分布预警-->
+    <div class="fl pile-distribute">
+            <div class="title">
+                <h1>桩点分布和预警</h1>
+                <div class="fl point-list" id="pointList">
+                    <div class="fl an1"></div>
+                    <div class="fl an2"></div>
+                    <div class="fl an3"></div>
+                    <div class="fl an4"></div>
+                    <div class="fl an5"></div>
+                    <div class="fl an6"></div>
+                </div>
+                <span class="fr" id="time">
+                    
+                </span>
+            </div>
+            <div class="contents">
+                <div class="fl map" id="map">
+                      <!--地图显示区域-->
+                </div>
+                <div class="shade" id="shade"></div>
+                <div class="fr list">
+                    <dl>
+                        <dt>今日新增用户</dt>
+                        <dd>
+                           <a id="addUser" href="./html/addUser.html"></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt2">今日充值金额</dt>
+                        <dd>
+                          	<a id="todayCharge" href="./html/today_income.html"></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt3">今日电费</dt>
+                        <dd>
+                           	<a id="todayFee" href="./html/serve_elec.html"></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt4">今日服务费</dt>
+                        <dd>
+                            <a id="todayServiceFee" href="./html/serve_elec.html"></a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+    </div>
+    <!--桩数据分析-->
+    <div class="fr pile-analyze">
+            <div class="title">
+                	数据分析
+            </div>
+
+            <div class="linePic">
+                <!--折线图-->
+                <div class="line" id="l1">
+                    
+                </div>
+                <div class="line" id="l2">
+                    
+                </div>
+            </div>
+    </div>
+</div>
+</section>
+<div class="blank2"></div>
+<section>
+    <div class="wrap clearfix">
+        <!--最近充电-->
+        <div class="fl recently">
+            <div class="title">最近充电</div>
+            <div class="recently-contents">
+                <table border="0">
+                <thead>
+                    <tr>
+                        <td width="300" class="tl"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;站名</span></td>
+                        <td width="200">充电量(度)</td>
+                        <td width="284">充电时长</td>
+                        <td width="284">消费金额(元)</td>
+                    </tr>
+                </thead>
+                <tbody id="recently">
+                    <!-- 异步获得数据 -->
+                   
+                </tbody>
+            </table>
+            
+            </div>
+            
+        </div>
+        <!--统计分析-->
+        <div class="fr statistics">
+            <div class="title">今日统计</div>
+            <div class="contents">
+                <div class="fl">
+                    <div id="main1" class="dashboard"></div>
+                    <div style="text-align: center;color:#000; font-size: 0.8rem;">今日充电量</div>
+                </div>
+                <div class="fl">
+                    <div id="main2" class="dashboard"></div>
+                    <div style="text-align: center;color:#000; font-size: 0.8rem;">今日充电次数</div>
+                </div>
+
+                <div class="fl">
+                    <div id="main3" class="dashboard"></div>
+                    <div style="text-align: center;color:#000; font-size: 0.8rem;">今日桩使用数</div>
+                </div>
+                <div class="fl">
+                    <div id="main4" class="dashboard"></div>
+                    <div style="text-align: center;color:#000; font-size: 0.8rem;">今日桩故障数</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	
+</div>
+
+    
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="layui.js"></script>
+<script type="text/javascript" src="js/electric_station.js" ></script>
+
+</body>
+</html>

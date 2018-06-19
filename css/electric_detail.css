@@ -1,0 +1,446 @@
+header {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+    background-color: none;
+    background: url(../images/bb.jpg) no-repeat;
+	position: relative;
+}
+header img {
+	position: absolute;
+	width: 10%;
+	height: 44px;
+    top: 8px;
+    left: 1%;
+}
+header h3 {
+	float: right;
+	color: #fff;
+	font-size: 1.2rem;
+    margin-right: 2%;
+}
+nav {
+	width: 10%;
+	overflow: hidden;
+	background: #009d9a;
+	float: left;
+	text-align: center;
+	position: absolute;
+    bottom: 0;
+    top: 60px;
+    z-index: 999;
+}
+nav a {
+	display: block;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 0.7rem;
+	border-bottom: 1px solid #0b7562;
+}
+nav a:hover {
+	color: #fff;
+	background: #0b675e;
+	transition: 800ms ease;
+}
+nav a.show {
+	background: #0b675e;
+}
+.drop {
+	font-size: 0.6rem;
+}
+.elec_date {
+	float: left;
+	width: 96%;
+	margin:2%;
+	background: #FFF;
+	border-radius: 10px;
+	box-shadow: 1px 3px 10px #757575;
+}
+.elec_date .layui-table {
+	width: 94%;
+	margin: 1% 3%;
+}
+.lead {
+	margin: 1%;
+}
+.lead a:hover{
+	color: #009d9a;
+}
+.cur {
+	color: #009d9a;
+}
+#all {
+	display: none;
+}
+#demo6 {
+	margin-left: 3%;
+}
+.elec_date h2 {
+	font-size: 1rem;
+	margin: 1% 0;
+    margin-left: 3%;
+    float: left;
+}
+.slide {
+	width: 70px;
+	height: 60px;
+	overflow: hidden;
+	position: absolute;
+	right: 4%;
+	margin-top: 2%;
+	background: #009d9a;
+	padding: 10px 0;
+	z-index: 9;
+	display: none;
+}
+.godata {
+	position: absolute;
+	height: 40px;
+	width: 70px;
+    font-size: 0.6rem;
+	background: #009d9a;
+	border: none;
+	right: 4%;
+	padding: 4px 20px;
+	color: #fff;
+	display: block;
+	z-index: 99;
+}
+
+.godata:hover {
+	cursor: pointer;
+	background: #0b675e;
+}
+#export {
+	/*float: right;*/
+	/*margin: 1% 3%;*/
+	width: 100%;
+	background: #009d9a;
+	border: none;
+	color: #fff;
+	height: 30px;
+	display: block;
+
+	border-bottom: 1px solid #fff;
+}
+#export:hover {
+	background: #0b675e;
+	cursor: pointer;
+}
+#allexport {
+	/*float: right;*/
+    /* margin: 1% -2%; */
+   width: 100%;
+    right: 3%;
+    top: 31%;
+    height: 30px;
+    background: #009d9a;
+    border: none;
+
+    color: #fff;
+    display: block;
+}
+#allexport:hover {
+	background: #0b675e;
+	cursor: pointer;
+}
+
+.elec_date thead .head {
+	color: #000;
+	height: 60px;
+}
+.elec_date thead .head th {
+	text-align: center;
+	font-size: 0.8rem;
+}
+.elec_num tr{
+	text-align: center;
+}
+.allcont{
+	width: 90%;
+    position: absolute;
+    bottom: 0%;
+    top: 60px;
+    right: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #f5f5f5;
+}
+.where {
+	display: inline-block;
+	
+}
+
+.gun_date {
+	float: left;
+	width: 96%;
+	margin:2%;
+	background: #FFF;
+	border-radius: 10px;
+	box-shadow: 1px 3px 10px #757575;
+}
+
+.gun_date .layui-table {
+	width: 94%;
+	margin: 1% 3%;
+}
+.gun_date h2 {
+	font-size: 1rem;
+	margin: 1% 0;
+    margin-left: 3%;
+    float: left;
+}
+#demo7 {
+	margin-left: 3%;
+}
+.gun_date thead {
+	/*background: #009d9a;*/
+}
+.gun_date thead .head {
+	color: #000;
+	height: 60px;
+}
+.gun_date thead .head th {
+	text-align: center;
+	font-size: 0.8rem;
+}
+.gun_num .num {
+	text-align: center;
+}
+
+.bar {
+	float: left;
+	width: 96%;
+	margin: 2%;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 1px 3px 10px #757575;
+}
+.bar .linePic {
+	width: 100%;
+	overflow: hidden;
+}
+.user {
+	width:100%;
+	float: left;
+}
+.user h2 {
+	font-size: 0.7rem;
+	padding: 2%;
+}
+.user h2 span {
+	font-size: 1rem;
+	padding: 2%;
+	color: #009d9a;
+	font-weight: 700;
+}
+.amountMonet {
+	width: 100%;
+	float: left;
+}
+.amountMonet h2 {
+	font-size: 0.7rem;
+	padding: 2%;
+    float: left;
+    border-bottom: 1px solid #019d9a;
+    border-right: 1px solid #019d9a;
+	
+}
+.amountMonet h2 span {
+	font-size: 1rem;
+	color: #009d9a;
+	font-weight: 700;
+}
+.bar .linePic .line {
+	float: left;
+	width: 100%;
+	height: 420px;
+}
+.data_s {
+	margin-top: 2%;
+	margin-left: 2%;
+}
+.data_s button {
+	margin-left: 2%;
+	width: 6%;
+}
+.data_s button:hover {
+	background: #0b675e;
+}
+.data_s input {
+	height: 40px;
+	border: 1px solid #e6e6e6;
+	border-radius: 20px;
+	padding: 0 0.4rem;
+	width: 10%;
+}
+.data_s span {
+	margin:0 0.5rem;
+	
+}
+
+.data_s select {
+	width: 8%;	
+	height: 40px;
+	/*box-shadow: 0 0 5px #999;*/
+	border: 1px solid #e6e6e6;
+	border-radius: 20px;
+	padding-left: 4px;
+	margin-left: 2%;
+	/*background: -webkit-linear-gradient(top,#fff 20%,#f6f6f6 42%,#eee 77%,#f4f4f4 100%);*/
+}
+.elec_name:focus {
+	border-color:#0b6967;
+}
+
+.today_date {
+	float: left;
+	width: 96%;
+	margin:1% 2%;
+	background: #FFF;
+	border-radius: 10px;
+	box-shadow: 1px 3px 10px #757575;
+}
+.today_date .layui-table {
+	width: 94%;
+	margin: 1% 3%;
+}
+#demo9 {
+	margin-left: 3%;
+}
+.today_date h2 {
+	font-size: 1rem;
+	margin: 1% 0;
+    margin-left: 3%;
+    float: left;
+}
+.today_date thead {
+	/*background: #009d9a;*/
+}
+.today_date thead .head {
+	color: #000;
+	height: 60px;
+}
+.today_date thead .head th {
+	text-align: center;
+	font-size: 0.8rem;
+}
+.today_num tr{
+	text-align: center;
+}
+
+
+.today_fee {
+	float: left;
+	width: 96%;
+	margin:2%;
+	background: #FFF;
+	border-radius: 10px;
+	box-shadow: 1px 3px 10px #757575;
+}
+.today_fee .layui-table {
+	width: 94%;
+	margin: 1% 3%;
+}
+#demo1 {
+	margin-left: 3%;
+}
+.today_fee h2 {
+	font-size: 1rem;
+	margin: 1% 0;
+    margin-left: 3%;
+    float: left;
+}
+.today_fee thead {
+	/*background: #009d9a;*/
+}
+.today_fee thead .head {
+	color: #000;
+	height: 60px;
+}
+.today_fee thead .head th {
+	text-align: center;
+	font-size: 0.8rem;
+}
+.today_static tr{
+	text-align: center;
+}
+
+
+.today_getmoney {
+	float: left;
+	width: 96%;
+	margin:2%;
+	background: #FFF;
+	border-radius: 10px;
+	box-shadow: 1px 3px 10px #757575;
+}
+.today_getmoney .layui-table {
+	width: 94%;
+	margin: 1% 3%;
+}
+#demo2 {
+	margin-left: 3%;
+}
+.today_getmoney h2 {
+	font-size: 1rem;
+	margin-top: 1%;
+    margin-left: 3%;
+}
+.today_getmoney thead {
+	/*background: #009d9a;*/
+}
+.today_getmoney thead .head {
+	color: #000;
+	height: 60px;
+}
+.today_getmoney thead .head th {
+	text-align: center;
+	font-size: 0.8rem;
+}
+.today_allmoney tr{
+	text-align: center;
+}
+
+
+.recharge {
+	float: left;
+	width: 96%;
+	margin:2%;
+	background: #FFF;
+	border-radius: 10px;
+	box-shadow: 1px 3px 10px #757575;
+}
+.recharge .layui-table {
+	width: 94%;
+	margin: 1% 3%;
+}
+#demo2 {
+	margin-left: 3%;
+}
+.recharge h2 {
+	font-size: 1rem;
+	margin: 1% 0;
+    margin-left: 3%;
+    float: left;
+}
+.recharge thead {
+	/*background: #009d9a;*/
+}
+.recharge thead .head {
+	color: #000;
+	height: 60px;
+}
+.recharge thead .head th {
+	text-align: center;
+	font-size: 0.8rem;
+}
+.recharge_num tr{
+	text-align: center;
+}
+
+
+    
+

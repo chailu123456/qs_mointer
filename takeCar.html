@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>奇速共享</title>
+    <link rel="stylesheet" href="css/layui.css"  media="all">
+    <link rel="icon" href="images/ico.ico">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 75 + 'px';
+        window.onresize = function(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 75 + 'px';
+        }
+    </script>
+</head>
+<body>
+	<header>
+		<img src="images/LOGO1.png"/>
+		<h3>奇速共享汽车数据监控系统</h3>
+	</header>
+	<nav class="nav">
+		<a href="index.html"><i class="iconfont icon-yunyingguanli"></i>汽车运营数据</a>
+		<a href="takeCar.html" class="show drop"><i class="iconfont icon-sign104"></i>挪车总数</a>
+		<!--<a href="no_takeCar.html">未还车总数</a>-->
+		<a href="electric_station.html"><i class="iconfont icon-yunyingtuiguang"></i>充电桩监控数据</a>
+		<!--<a href="electric_detail.html">充电桩数据</a>-->
+	</nav>
+
+    <div class="car_date">
+    	<div class="lead">
+    		<a href="index.html">首页>></a>
+    		<a class="cur" href="javascript:void(0)">挪车总数</a>
+    	</div>
+        <form>
+            <div class="layui-form-item">
+                <label class="layui-form-label">车牌号</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入车牌号" class="layui-input">
+                </div>
+            </div>
+      
+            <div class="select">
+				<select id="province" name="请选择">
+				
+				</select>
+				<select id="city" name="请选择">
+				
+					
+				</select>
+				<!--<select id="city_small" name="请选择">
+
+				</select>-->
+				<input type="button" class="selects" value="查  询"/>
+			
+			</div>
+        </form>
+        <div class="alldatas">挪车数据范围 :<span class="range">全国</span></div>
+        <table border="0" cellspacing="0" cellpadding="0" class="layui-table">
+            <thead>
+                <tr class="head">
+                  	<th>汽车编码</th>
+                  	<th>汽车品牌</th>
+                  	<th>汽车系列</th>
+                  	<th>汽车型号</th>
+                  	<th>汽车状态</th>
+                  	<th>车牌号</th>
+                  	<th>汽车颜色</th>
+                  	<th>剩余电量</th>
+                  	<th>续航里程</th>
+                  	<th>停车地址</th>
+                </tr> 
+            </thead>
+            <tbody class="needcar_num">
+                  
+            </tbody>
+        </table>
+    
+    </div>
+    <div id="pages"></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="layui.js"></script>
+<script type="text/javascript" src="js/takeCar.js" ></script>
+</body>
+</html>

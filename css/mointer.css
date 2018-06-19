@@ -1,0 +1,525 @@
+body {
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+}
+.tab {
+    float: right;
+    width: 10%;
+    height: 40px;
+    background: #009d9a;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+.tab li {
+    width: 50%;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+.tab li:hover {
+    cursor: pointer;
+}
+.tab_on {
+    background:#03615f;
+}
+.tab_cont {
+    width: 90%;
+    float: right;
+}
+.tab_cont .alldata:last-child {
+    display: none;
+}
+
+.alldata {
+    width: 100%;
+    margin: 0 0 2% 0;
+    overflow: hidden;
+}
+.tabledata {
+    float: left;
+    margin-left: 2%;
+}
+.alldata .data_one {
+    width: 72%;
+}
+.data_one .layui-table {
+    width: 100%;
+    height: 82px;
+    margin-top: 26px;
+    border-bottom: 2px solid #009d9a;
+}
+
+.highcharts-menu .highcharts-menu-item:nth-of-type(2){
+	display: none;
+}
+.highcharts-menu .highcharts-menu-item:nth-of-type(3){
+	display: none;
+}
+.highcharts-menu .highcharts-menu-item:nth-of-type(4){
+	display: none;
+}
+.highcharts-menu .highcharts-menu-item:nth-of-type(5){
+	display: none;
+}
+.highcharts-menu hr:nth-of-type(2) {
+	display: none;
+}
+.highcharts-menu .highcharts-menu-item:nth-of-type(6){
+	display: none;
+}
+.highcharts-menu .highcharts-menu-item:first-child {
+	display: show;
+}
+.highcharts-menu .highcharts-menu-item:last-child {
+	display: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #009d9a;
+}
+.ppp {
+    color: #009d9a;
+    font-weight: 700;
+}
+.head {
+    width:100%;
+}
+.alldata .data_three {
+    width: 16%;
+}
+.data_three .layui-table {
+    width: 100%;
+    margin-top: 26px;
+    border-bottom: 2px solid #009d9a;
+}
+.data_three .product {
+    margin-top: 26px;
+}
+.data_three .product tr th{
+    text-align: center;
+    height: 2.4rem;
+    width: 9%;
+    line-height: 2.4rem;
+   	border: none;
+    font-size: 0.7rem;
+    padding: 0 0;
+    color: #fff;
+}
+.data_three th {
+    width: 49%;
+}
+.data_three td {
+    width: 49%;
+}
+.highcharts-legend {
+    display: none;
+}
+#container {
+    width: 78%;
+    float: left;
+    height: 700px;
+   
+}
+.highcharts-text-outline {
+    color: red;
+}
+.layui-table {
+    text-align: center;
+}
+
+.layui-table colgroup {
+    text-align:center;
+}
+.layui-table thead tr, {
+    background-color: none;
+}
+.layui-table thead {
+    background-color:#009d9a;
+    border-collapse:collapse;
+
+}
+.layui-table {
+    margin: 0;
+}
+.all_one {
+    height: 40px;
+    border-bottom: 2px solid #009d9a;
+}
+.tell {
+	position: absolute;
+	left: 42%;
+	color: #ff1919;
+	opacity: 0;
+}
+.head th {
+    text-align: center;
+    height: 40px;
+    width: 4%;
+    line-height: 40px;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.6rem 0;
+}
+.layui-table tbody tr td:hover {
+    cursor: pointer;
+	color: #009d9a;
+}
+.layui-table tbody tr td {
+    text-align: center;
+    height: 2.4rem;
+    width: 9%;
+    line-height: 2.4rem;
+   	border: none;
+    font-size: 0.7rem;
+    padding: 0 0;
+}
+.title {
+    text-align: center;
+    color: #009d9a;
+    font-size: 28px;
+    padding: 3% 0;
+}
+.bb {
+    color: red;
+}
+.box {
+    width: 90%;
+    height: 700px;
+    float: right;
+    position: relative;
+    overflow: hidden;
+   	
+}
+
+.layui-input-inline{
+	float: left;
+}
+
+.shadow {
+    width: 100%;
+    height: 700px;
+    background:rgba(0, 0, 0, 0.8);
+    filter:alpha(opacity=80);  /*设置透明度为60%*/
+    opacity:0.8;  /*非IE浏览器下设置透明度为60%*/ 
+    position: absolute;
+    z-index: 2;
+    top: 800px;
+    display: none;
+}
+.contdata {
+     width: 100%;
+     height:700px;
+     position: absolute;
+     right: 0;
+     z-index: 8;
+     background: #fff;
+     top: 800px;
+     border-top: 1px solid #ccc;
+     z-index: 99;
+}
+.selectdate {
+	margin-top: 8%;
+}
+.layui-laydate-footer span.laydate-btns-time {
+    display: none;
+}
+.contdata .layui-form {
+    height: 50px;
+}
+.showdata {
+    width: 80%;
+    height: 600px;
+    float: left;
+    margin-left: 8%;
+
+}
+.change_date {
+	height: 50px;
+}
+.close {
+	position: absolute;
+    right: 2%;
+    top: 4%;
+    width: 16px;
+}
+.close:hover {
+	 transform:scale(1.4);
+    -webkit-transform:scale(1.4);
+    -moz-transform:scale(1.4);
+    -o-transform:scale(1.4);
+    -ms-transform:scale(1.4);
+	transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;
+}
+.showdata .highcharts-credits {
+    display: none;
+}
+.detdate {
+    width: 90%;
+    height: 60%;
+    /*background-color: rgba(0,0,0,.6);*/
+   background: #fff;
+    position: absolute;
+    right: -90%;
+    top:40%;
+    z-index: 9;
+}
+.detdate table {
+    width: 100%;
+    margin-top: 4%;
+}
+.detdate table thead {
+    background: #009d9a;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+.detdate table tbody {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+}
+
+.detdate .layui-table-header {
+    border: none;
+}
+.detdate .layui-table-tool {
+    background: #fff;
+}
+.detdate .layui-table-view {
+    width: 90%;
+    margin-left: 10%;
+}
+.detdate .layui-table-view .layui-table {
+    width: 100%;
+}
+
+.detdate .laytable-cell-1-id {
+    width: 100%;
+}
+.detdate .layui-table th {
+    text-align: center;
+    width: 20%;
+}
+.detdate .laytable-cell-1-username {
+    width: 100%;
+}
+.detdate .laytable-cell-1-sex {
+    width: 100%;
+}
+.detdate .laytable-cell-1-city {
+    width: 100%;
+}
+.detdate .laytable-cell-1-sign {
+    width: 100%;
+}
+.search {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin: 2% 24%;
+}
+.search .contents {
+    width: 40%;
+    height: 40px;
+    border: none;
+    padding: 0 1em;
+}
+.search .startSearch {
+    width: 10%;
+    height: 40px;
+    border: none;
+    background:#009d9a;
+    font-size: 0.7rem;
+    color: #fff;
+}
+.search span {
+    display: inline-block;
+    width: 10%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    background:#009d9a;
+    font-size: 0.7rem;
+    color: #fff;
+}
+#demo7 {
+    background:#fff;
+    margin-top: -2%;
+}
+#net {
+    background:#fff;
+}
+#demo7 .layui-laypage-skip {
+    margin-left: 0;
+}
+#container .highcharts-contextbutton {
+    display: none;
+}
+.car_date {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 100%;
+}
+.car_date .layui-form {
+    margin-top: 50px;
+}
+.car_date .layui-form-item {
+    clear: none;
+    float: left;
+    width: 20%;
+}
+.car_date .startSearch {
+    width: 10%;
+    height: 40px;
+    border: none;
+    background:#009d9a;
+    font-size: 0.7rem;
+    color: #fff;
+}
+.car_date .layui-form-item:last-child {
+    margin-left: 10%;
+}
+.car_date .layuibtn {
+    width: 38%;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009d9a;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /*margin-left: 26%;*/
+}
+.car_date label {
+    color: #fff;
+}
+.car_usedate {
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0,0,0,.7);*/
+    background: #fff;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    top: 100%;
+}
+.car_usedate .layui-form {
+    margin-top: 50px;
+}
+.car_usedate .layui-form-item {
+    clear: none;
+    float: left;
+    width: 26%;
+}
+.car_usedate .startSearch {
+    width: 10%;
+    height: 40px;
+    border: none;
+    background:#009d9a;
+    font-size: 0.7rem;
+    color: #fff;
+}
+.car_usedate .layui-form-item:last-child {
+    margin-left: 10%;
+}
+.car_usedate .layuibtn {
+    width: 38%;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009d9a;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /*margin-left: 26%;*/
+}
+.car_usedate label {
+    color: #000;
+}
+.layui-laypage-count {
+    padding: 0 18px;
+}
+.layui-laypage {
+    margin: 10px 30px;
+   
+}
+#uescars {
+    background: #fff;
+}
+#pages {
+    background: #fff;
+}
+.select select {
+	width: 20%;	
+	height: 40px;
+	box-shadow: 0 0 5px #999;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	margin:4% 4% 0;
+	background: -webkit-linear-gradient(top,#fff 20%,#f6f6f6 42%,#eee 77%,#f4f4f4 100%);
+}
+.select button {
+	width: 8%;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    background-color: #009d9a;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.select button:hover {
+	background: #027d7b;
+}
+#det {
+	color: #009d9a;
+}
+.dateing {
+	position: absolute;
+    margin-left: 12%;
+    margin-top: 1%;
+}
+.adress {
+	color: #fff;
+	font-size: 1rem;
+	padding: 1%;
+	text-align: center;
+    background: #009d9a;
+}
+#pagination_3 {
+	position: absolute;
+}
+#pagination_3 select {
+	display: none;
+}
+.whj_jqueryPaginationCss-1:nth-last-of-type{
+	display: none;
+}
+

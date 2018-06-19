@@ -1,0 +1,34 @@
+.data_s {
+	width: 70%;
+	float: left;
+	margin-top: 2%;
+	margin-left: 6%;
+}
+.data_s select {
+	width: 18%;	
+}
+.data_s button {
+	width: 10%;	
+}
+.gun_date .layui-table {
+	 margin-top: 7%;
+}
+#gunname {
+	width: 20%;
+}
+.popup {
+	text-align: center;
+    width: 12%;
+    margin: 2% auto;
+    display: none;
+    background: #fff;
+    z-index: 999999999999;
+	border-radius: 10px;
+	border: 1px solid #ebeef5;
+	    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    position: relative;
+}
+
+h2 {
+	line-height: 100px;
+}

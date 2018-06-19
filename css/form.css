@@ -1,0 +1,41 @@
+.car_date .layui-form {
+    margin-top: 50px;
+}
+.car_date .layui-form-item {
+    clear: none;
+    float: left;
+    width: 26%;
+}
+.car_date .startSearch {
+    width: 10%;
+    height: 40px;
+    border: none;
+    background:#009d9a;
+    font-size: 0.7rem;
+   
+}
+.car_date .layui-form-item:last-child {
+    margin-left: 10%;
+}
+.car_date .layuibtn {
+    width: 38%;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009d9a;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /*margin-left: 26%;*/
+}
+.car_date label {
+    
+}
+#demo6 {
+    margin-left: 2%;
+}

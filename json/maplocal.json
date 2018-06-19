@@ -1,0 +1,16 @@
+{  
+	"piles_info":[
+		{"station_longitude":"114.080625","station_latitude":"22.562061","far":"0","error":"1","adress":"振中路与燕南路交叉口西100米","city":"南山西湖林雨充电站","all":"6","fast":"4","slowly":"2"},
+		{"station_longitude":"113.964239","station_latitude":"22.556354","far":"0","error":"1","adress":"北环大道7045号","city":"龙岗充电桩","all":"16","fast":"4","slowly":"12"},
+		{"station_longitude":"113.901754","station_latitude":"22.574742","far":"1","error":"0","adress":"宝荷大道85号","city":"宝安充电桩","all":"7","fast":"4","slowly":"3"},
+		{"station_longitude":"113.991705","station_latitude":"22.536694","far":"0","error":"1","adress":"布澜路29号","city":"福田充电桩","all":"6","fast":"1","slowly":"5"},
+		{"station_longitude":"114.133497","station_latitude":"22.556988","far":"0","error":"1","adress":"龙城街道清林路546号","city":"大鹏充电桩","all":"12","fast":"10","slowly":"2"},
+		{"station_longitude":"114.019514","station_latitude":"22.613729","far":"1","error":"0","adress":"沙河西路5158号","city":"大磡村充电桩","all":"21","fast":"9","slowly":"12"},
+		{"station_longitude":"113.887678","station_latitude":"22.597248","far":"1","error":"0","adress":"高新南环路8号","city":"动物园充电桩","all":"15","fast":"7","slowly":"8"},
+		{"station_longitude":"113.956514","station_latitude":"22.563804","far":"0","error":"1","adress":"高新南环路6号","city":"欢乐海岸充电桩","all":"6","fast":"4","slowly":"2"},
+		{"station_longitude":"113.975054","station_latitude":"22.526071","far":"1","error":"0","adress":"常兴路176号","city":"金谷充电桩","all":"13","fast":"11","slowly":"2"},
+		{"station_longitude":"113.886648","station_latitude":"22.583776","far":"1","error":"6","adress":"深圳市南山区龙珠四路88号金谷创业园","city":"盐田充电桩","all":"12","fast":"10","slowly":"2"},
+		{"station_longitude":"114.028097","station_latitude":"22.623712","far":"2","error":"0","adress":"西丽大学城丽山路16号","city":"海港城充电桩","all":"16","fast":"8","slowly":"8"},
+		{"station_longitude":"114.221388","station_latitude":"22.721759","far":"2","error":"1","adress":"振中路与燕南路交叉口西100米","city":"北站充电桩","all":"6","fast":"4","slowly":"2"}
+	]
+} 

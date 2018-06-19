@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>奇速共享</title>
+   	<link rel="stylesheet" href="../css/layui.css" media="all">
+    <link rel="icon" href="../images/ico.ico">
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../css/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../css/electric_detail.css"/>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 80 + 'px';
+        window.onresize = function(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 80 + 'px';
+        }
+    </script>
+</head>
+<body>
+	<header>
+		<img src="../images/LOGO1.png"/>
+		<h3>奇速共享充电桩数据监控系统</h3>
+	</header>
+	<nav class="nav">
+		<a href="../index.html"><i class="iconfont icon-yunyingguanli" style="font-size: 1rem;"></i>汽车运营数据</a>
+		<!--<a href="takeCar.html">挪车总数</a>
+		<a href="no_takeCar.html">未还车总数</a>-->
+		<a href="../electric_station.html"><i class="iconfont icon-yunyingtuiguang" style="font-size: 1rem;"></i>充电桩监控数据</a>
+		<a href="five_detail.html" class="show drop"><i class="iconfont icont icon-digital"></i>充电桩数据</a>
+	</nav>
+	<div class="allcont">
+		<div class="lead">
+    		<a href="../electric_station.html">充电桩监控>></a>
+    		<a class="cur" href="javascript:void(0)">充电桩数据</a>
+    	</div>
+	    <div class="data_s">
+	    	<span>站点名称：</span><input class="elec_name" type="text" />
+	    	<span>开始日期:</span><input type="text" name="te" value="" id="from" class="test-style" />
+	    	<span>结束日期：</span><input type="text" name="tex" value="" id="to" class="test-style" />
+	    	<select id="province" name="请选择">
+				<option value="请选择省份">请选择省份</option>
+			</select>
+			<select id="city" name="请选择">
+				<option value="请选择市">请选择市</option>
+			</select>
+			<select id="city_small" name="请选择">
+				<option value="请选择县，区">请选择县，区</option>
+			</select>
+	    	<button id="finddetail" class="layui-btn layui-btn-radius">查询</button>
+	    </div>
+   
+	    
+	    <div class="elec_date">
+	    	<h2>充电桩运营表</h2>
+	    	<button class="godata">导出</button>
+    		<div class="slide">
+    			<button id="export">导出本页</button>
+    			<button id="allexport">全部导出</button>
+    		</div>
+	        <table border="0" cellspacing="0" cellpadding="0" class="layui-table datas">
+	            <thead>
+	                <tr class="head">
+	                  	<th>站点</th>
+	                  	<th>充电次数（次）</th>
+	                  	<th>充电度数（Kwh）</th>
+	                  	<th>充电时长（min）</th>
+	                  	<th>充电电费（元）</th>
+	                  	<th>充电服务费（元）</th>
+	                  	<th>总计（元）</th>
+	                </tr> 
+	            </thead>
+	            <tbody class="elec_num">
+	                 
+	            </tbody>
+	        </table>
+	        <table border="0" cellspacing="0" cellpadding="0" id="all" class="layui-table">
+	            <thead>
+	                <tr class="head">
+	                  	<th>站点</th>
+	                  	<th>充电次数（次）</th>
+	                  	<th>充电度数（Kwh）</th>
+	                  	<th>充电时长（min）</th>
+	                  	<th>充电电费（元）</th>
+	                  	<th>充电服务费（元）</th>
+	                  	<th>总计（元）</th>
+	                </tr> 
+	            </thead>
+	            <tbody class="allelec_num">
+	                 
+	            </tbody>
+	        </table>
+	        <div id="demo6"></div>
+	    </div>
+	</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.datepicker.js"></script>
+<script src="http://mananger.qisu666.com:80/resources/supervision/js/echarts.min.js" type="text/javascript"></script>
+<script src="../layui.js"></script>
+<script type="text/javascript" src="../js/jqexcal.min.js"></script>
+<script type="text/javascript" src="../js/five_detail.js"></script>
+</body>
+</html>

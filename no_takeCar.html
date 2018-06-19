@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>奇速共享</title>
+    <link rel="stylesheet" href="css/layui.css"  media="all">
+    <!--<link rel="stylesheet" href="css/form.css">-->
+    <link rel="icon" href="images/ico.ico">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+    <link rel="stylesheet" type="text/css" href="css/take_car.css"/>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 75 + 'px';
+        window.onresize = function(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 75 + 'px';
+        }
+    </script>
+</head>
+<body>
+	<header>
+		<img src="images/LOGO1.png"/>
+		<h3>奇速共享汽车数据监控系统</h3>
+	</header>
+	<nav class="nav">
+		<a href="index.html"><i class="iconfont icon-yunyingguanli"></i>汽车运营数据</a>
+		<!--<a href="takeCar.html">挪车总数</a>-->
+		<a href="no_takeCar.html" class="show drop"><i class="iconfont icon-typecar111"></i>未还车总数</a>
+		<a href="electric_station.html"><i class="iconfont icon-yunyingtuiguang"></i>充电桩监控数据</a>
+		<!--<a href="electric_detail.html">充电桩数据</a>-->
+	</nav>
+
+    <div class="car_date">
+    	<div class="lead">
+    		<a href="index.html">首页>></a>
+    		<a class="cur" href="javascript:void(0)">未还车总数</a>
+    	</div>
+        <form>
+            <div class="layui-form-item">
+                <label class="layui-form-label">订单编码</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入订单编码" class="layui-input car_type">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">手机号</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入手机号" class="layui-input car_p">
+                </div>
+            </div>
+           
+            <div class="select">
+				<select id="province" name="请选择">
+					<option value="请选择省份">请选择省份</option>
+				</select>
+				<select id="city" name="请选择">
+					<option value="请选择市">请选择市</option>
+					
+				</select>
+				<!--<select id="city_small" name="请选择">
+					<option value="请选择县，区">请选择县，区</option>
+				</select>-->
+				<input type="button" class="select_nocar" value="查  询" />
+				
+			</div>
+        </form>
+        <div class="alldatas">未还车数据范围 :<span class="ranges">全国</span></div>
+        <table border="0" cellspacing="0" cellpadding="0" class="layui-table">
+              <thead>
+                <tr class="head">
+                  <th>订单编码</th>
+                  <th>手机号</th>
+                  <th>城市编码</th>
+                  <th>城市名称</th>
+                  <th>订单状态</th>
+                  <th>计费开始时间</th>
+                  <th>使用里程</th>
+                  <th>使用时长</th>
+                  <th>租车网点</th>
+                  <th>车牌号</th>
+                </tr> 
+              </thead>
+              <tbody class="car_num">
+                  
+              </tbody>
+        </table>
+    
+    </div>
+    <div id="demo6"></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="layui.js"></script>
+<script type="text/javascript" src="js/no_takeCar.js" ></script>
+</body>
+</html>

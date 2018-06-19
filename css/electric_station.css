@@ -1,0 +1,233 @@
+body{
+	background-color: #fff;
+}
+.header {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+    background-color: none;
+    background: url(../images/bb.jpg) no-repeat;
+	position: relative;
+}
+.header img {
+	position: absolute;
+	width: 10%;
+	height: 44px;
+    top: 8px;
+    left: 1%;
+}
+.header h3 {
+	float: right;
+	color: #fff;
+	font-size: 1.2rem;
+    margin-right: 2%;
+}
+nav {
+	width: 10%;
+	overflow: hidden;
+	background: #009d9a;
+	text-align: center;
+	position: absolute;
+    bottom: -16%;
+    top: 60px;
+    z-index: 999;
+}
+nav a {
+	display: block;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 0.7rem;
+}
+nav a:hover {
+	color: #fff;
+	background: #0b675e;
+	transition: 800ms ease;
+}
+nav a.show {
+	background: #0b675e;
+}
+.content {
+	width: 90%;
+	position: absolute;
+    bottom: -16%;
+    top: 60px;
+    right: 0;
+	/*border: 2px solid red;*/
+	/*overflow: hidden;*/
+}
+.map_data {
+	width: 100%;
+	margin-top: -2%;
+}
+.top ul {
+	background: none;
+	border: none;
+}
+.top li h2 {
+	color: #000;
+    font-size: 0.7rem;
+}
+.top li p{
+	font-size: 1rem;
+}
+.top li p a{
+	color: #000;
+}
+.top li p a:hover {
+	color: #009d9a;
+}
+#alldata {
+	width: 100%;
+}
+.clearfix {
+	width: 100%;
+}
+.top li {
+	width: 12%;
+	overflow: hidden;
+	margin-left: 0;
+}
+.top li div.img {
+	width: 22%;
+	margin-right: 0;
+	float: left;
+	margin-left: 6%;
+}
+.top li div.img img {
+	width: 74%;
+	margin-top: 22%;
+}
+.top li div:last-child {
+	width: 70%;
+
+}
+.point-list div {
+	background-color: #009d9a;
+}
+.pile-distribute {
+	border-left: 1px solid #009d9a;
+    box-shadow: 2px 2px 1px #009d9a;
+}
+.pile-distribute .contents .map {
+	width: 72%;
+	height: 15rem;
+}
+.pile-distribute .title {
+	background: none;
+	border-bottom: 1px solid #009d9a;
+}
+.pile-distribute .title h1 {
+	font-size: 1.2rem;
+	background: none;
+	color: #000;
+	border-bottom: 1px solid #009d9a;
+}
+.pile-distribute .title span {
+	font-size: 0.8rem;
+	    color: #000;
+}
+.pile-distribute {
+	width: 62%;	
+	height: 20rem;
+	border-left: none;
+    box-shadow: 2px 2px 1px #009d9a;
+}
+.pile-analyze .title {
+	font-size: 1.2rem;
+	background: none;
+	color: #000;
+	border-bottom: 1px solid #009d9a;
+}
+.pile-analyze {
+	width: 36%;
+	height: 20rem;
+	border-left: 1px solid #009d9a;
+    box-shadow: 2px 2px 1px #009d9a;
+}
+.recently {
+	width: 62%;
+	height: 14rem;
+	border-left: none;
+    box-shadow: 2px 2px 1px #009d9a;
+}
+.recently table thead {
+	background-color: #009d9a;
+}
+.recently table tr {
+	color: #fff;
+}
+.recently table tbody tr {
+	color: #000;
+	line-height: 1.8rem;
+}
+.recently .title, .statistics .title {
+	font-size: 1.2rem;
+	height: 2.3rem;
+	background: none;
+	color: #000;
+	border-bottom: 1px solid #009d9a;
+}
+.recently table tr:nth-child(2n) {
+	background: #cacaca;
+}
+.statistics {
+	width: 36%;
+	height: 13rem;
+	border-left: 1px solid #009d9a;
+    box-shadow: 2px 2px 1px #009d9a;
+}
+.statistics .contents .fl {
+	float: left;
+	width: 24%;
+}
+.statistics .dashboard {
+	width: 100%;
+	height: 7rem;
+}
+.line {
+    width: 100%;
+    height: 8rem;
+    margin: 2% 0;
+    overflow: hidden;
+}
+
+.pile-distribute .contents .list {
+	width: 22%;
+	height: 15rem;
+	border-left: none;
+	padding: 0;
+}
+.contents .list dd {
+	margin-bottom: 2%;
+	font-size: 1rem;
+}
+.pile-distribute .contents .list dl {
+	width: 100%;
+}
+.pile-distribute .contents .list dl dt {
+	width: 60%;
+	font-size: 0.7rem;
+}
+.contents .list dd a{
+	color: #000;
+}
+.contents .list dd a:hover {
+	color: #009d9a;
+}
+.recently table thead td span {
+	font-size: 1rem;
+}
+.recently table tbody td i {
+	font-size: 0.7rem;
+}
+.iconfont {
+	font-size: 0.8rem;
+}
+.contents .list dt {
+	height: 2rem;
+	line-height: 2rem;
+	border-radius: 1rem;
+	margin-bottom: 0.4rem;
+}

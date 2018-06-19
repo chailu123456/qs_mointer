@@ -1,0 +1,9 @@
+{  
+	"chongdian":[
+		{"order_state":"02","rn":"1","station_name":"南山百旺研发大厦充电站","total_charge_money":"8","total_charge_quantity":"49","total_charge_times":"21:47:00"}
+		,{"order_state":"03","rn":"2","station_name":"福田区笔架山公馆充电站","total_charge_money":"28.62","total_charge_quantity":"5.9","total_charge_times":"56:47:00"}
+		,{"order_state":"04","rn":"3","station_name":"南山维也纳酒店充电站","total_charge_money":"54.62","total_charge_quantity":"6","total_charge_times":"08:12:00"}
+		,{"order_state":"05","rn":"4","station_name":"南山维也纳酒店充电站","total_charge_money":"54","total_charge_quantity":"22","total_charge_times":"04:55:00"}
+		,{"order_state":"06","rn":"5","station_name":"龙岗宝荷欣苑充电站","total_charge_money":"76","total_charge_quantity":"43","total_charge_times":"22:32:00"}
+	]
+} 
